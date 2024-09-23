@@ -1,0 +1,161 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;  /* Modern font */
+    background-image: url('https://source.unsplash.com/1600x900/?nature,landscap'); /* Beautiful background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;      
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #f3f3f3; /* Light text color */
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent dark overlay */
+    z-index: 0;
+}
+.container {
+    position: relative;
+    z-index: 1;
+    width: 420px;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent container */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Soft shadow */
+    border-radius: 15px; /* Rounded corners */
+    color: #ffffff; /* White text inside container */
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff8c00; /* Vibrant orange title color */
+    font-size: 28px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Subtle text shadow */
+}
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+input[type="text"] {
+    width: 50%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3); /* Transparent input background */
+    color: #0e0909; /* White text for input */
+    font-size: 16px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Soft inner shadow */
+}
+select {
+    width: 30%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.3); /* Transparent select background */
+    color: #110d0d;
+    font-size: 16px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Soft inner shadow */
+}
+button {
+    width: 18%;
+    padding: 12px;
+    border: none;
+    background-color: #61dafb; /* Bright cyan button */
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Button shadow */
+}
+button:hover {
+    background-color: #33bbf0; /* Darker cyan on hover */
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+li {
+    background-color: rgba(0, 0, 0, 0.4); /* Transparent dark task background */
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    color: #f3f3f3; /* White text for tasks */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow around tasks */
+}
+li.completed {
+    text-decoration: line-through;
+    background-color: rgba(50, 50, 50, 0.6); /* Darker background for completed tasks */
+    color: #bbb;
+}
+li button {
+    background-color: #ff616f; /* Soft red delete button */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+li button:hover {
+    background-color: #e63946; /* Darker red on hover */
+}
+.priority-low {
+    border-left: 6px solid #2e7d32; /* Green for low priority */
+}
+.priority-medium {
+    border-left: 6px solid #ffca28; /* Yellow for medium priority */
+}
+.priority-high {
+    border-left: 6px solid #d32f2f; /* Red for high priority */
+}
+.action-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+#clear-all {
+    background-color: #6a5acd; /* Soft purple for clear all button */
+    padding: 12px 25px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+#clear-all:hover {
+    background-color: #483d8b; /* Darker purple on hover */
+}
+
+/* Optional: Add some animation when adding/removing tasks */
+li {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.4s forwards;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
